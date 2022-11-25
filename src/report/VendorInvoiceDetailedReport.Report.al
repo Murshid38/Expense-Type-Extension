@@ -21,48 +21,54 @@ report 50103 "Vendor Invoice Detailed Report"
             column(ReportDate; Today)
             {
             }
-            column(Name; Name)
+            column(VendorName; Name)
             {
+                IncludeCaption = true;
             }
 
             dataitem(PurchInvHeader; "Purch. Inv. Header")
             {
 
-                RequestFilterFields = "Expense Type";
-
-                dataitem("Purchase Line"; "Purchase Line")
+                column(Vendor_Invoice_No_; "Vendor Invoice No.")
+                {
+                    IncludeCaption = true;
+                }
+                column(Expense_Type; "Expense Type")
+                {
+                    IncludeCaption = true;
+                }
+                dataitem("Purchase Inv Line"; "Purch. Inv. Line")
                 {
 
                     DataItemLink = "Document No." = field("No.");
                     //ensuring Purchase Line table Document No. field and Purch. Inv. Header table No. field is same value
 
                     DataItemLinkReference = PurchInvHeader;
-                    RequestFilterFields = "No.";
+                    // RequestFilterFields = "No.";
+                    //Item	Qty	Line Amount	Line Discount	Final Line Amount 
+
                     column(No_; "No.")
                     {
                         IncludeCaption = true;
 
                     }
-                    column(Description; Description)
+                    column(ItemQuantity; Quantity)
                     {
                         IncludeCaption = true;
 
                     }
-                    column(Unit_of_Measure_Code; "Unit of Measure Code")
-                    {
-                        IncludeCaption = true;
-
-                    }
-                    column(Quantity; Quantity)
-                    {
-                        IncludeCaption = true;
-                    }
-                    // column(Line_Amount; "Line Amount")
-                    // {
-                    //     IncludeCaption = true;
-                    // }
                     column(Direct_Unit_Cost; "Direct Unit Cost")
                     {
+                        IncludeCaption = true;
+
+                    }
+                    column(Line_Discount_Amount; "Line Discount Amount")
+                    {
+                        IncludeCaption = true;
+                    }
+                    column(Final_Line_Amount; "Line Amount")
+                    {
+                        //this field represents amount after discount(Final Line Amount)
                         IncludeCaption = true;
                     }
                 }

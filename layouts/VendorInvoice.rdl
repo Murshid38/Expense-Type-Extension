@@ -11,55 +11,6 @@
       <rd:DataSourceID>7a3e5aa6-8a67-4ec6-9ea1-c48981f2ddc9</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="ComName">
-          <DataField>ComName</DataField>
-        </Field>
-        <Field Name="ComAddress">
-          <DataField>ComAddress</DataField>
-        </Field>
-        <Field Name="ComPic">
-          <DataField>ComPic</DataField>
-        </Field>
-        <Field Name="ReportDate">
-          <DataField>ReportDate</DataField>
-        </Field>
-        <Field Name="BuyfromVendorName">
-          <DataField>BuyfromVendorName</DataField>
-        </Field>
-        <Field Name="VendorInvoiceNo">
-          <DataField>VendorInvoiceNo</DataField>
-        </Field>
-        <Field Name="InvoiceDiscountAmount">
-          <DataField>InvoiceDiscountAmount</DataField>
-        </Field>
-        <Field Name="InvoiceDiscountAmountFormat">
-          <DataField>InvoiceDiscountAmountFormat</DataField>
-        </Field>
-        <Field Name="AmountIncludingVAT">
-          <DataField>AmountIncludingVAT</DataField>
-        </Field>
-        <Field Name="AmountIncludingVATFormat">
-          <DataField>AmountIncludingVATFormat</DataField>
-        </Field>
-        <Field Name="RemainingAmount">
-          <DataField>RemainingAmount</DataField>
-        </Field>
-        <Field Name="RemainingAmountFormat">
-          <DataField>RemainingAmountFormat</DataField>
-        </Field>
-        <Field Name="Expense_Type">
-          <DataField>Expense_Type</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -944,15 +895,6 @@
       </DefaultValue>
       <Prompt>ComAddressCaption</Prompt>
     </ReportParameter>
-    <ReportParameter Name="ComPicCaption">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>ComPicCaption</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>ComPicCaption</Prompt>
-    </ReportParameter>
     <ReportParameter Name="BuyfromVendorNameCaption">
       <DataType>String</DataType>
       <DefaultValue>
@@ -1011,7 +953,7 @@
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>1</NumberOfColumns>
-      <NumberOfRows>9</NumberOfRows>
+      <NumberOfRows>8</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
@@ -1026,36 +968,31 @@
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>2</RowIndex>
-          <ParameterName>ComPicCaption</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>3</RowIndex>
           <ParameterName>BuyfromVendorNameCaption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
-          <RowIndex>4</RowIndex>
+          <RowIndex>3</RowIndex>
           <ParameterName>VendorInvoiceNoCaption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
-          <RowIndex>5</RowIndex>
+          <RowIndex>4</RowIndex>
           <ParameterName>InvoiceDiscountAmountCaption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
-          <RowIndex>6</RowIndex>
+          <RowIndex>5</RowIndex>
           <ParameterName>AmountIncludingVATCaption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
-          <RowIndex>7</RowIndex>
+          <RowIndex>6</RowIndex>
           <ParameterName>RemainingAmountCaption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
-          <RowIndex>8</RowIndex>
+          <RowIndex>7</RowIndex>
           <ParameterName>Expense_TypeCaption</ParameterName>
         </CellDefinition>
       </CellDefinitions>
@@ -1125,4 +1062,50 @@ jLq4g7pn7/N9o9BbuWZ83hHXPfAegtVhbmvCiNAQjLiFY6Q0hu2Hzq87+ApYJaEQhpn8GbEwLqrTKIfv
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ComName">
+          <DataField>ComName</DataField>
+        </Field>
+        <Field Name="ComAddress">
+          <DataField>ComAddress</DataField>
+        </Field>
+        <Field Name="ReportDate">
+          <DataField>ReportDate</DataField>
+        </Field>
+        <Field Name="BuyfromVendorName">
+          <DataField>BuyfromVendorName</DataField>
+        </Field>
+        <Field Name="VendorInvoiceNo">
+          <DataField>VendorInvoiceNo</DataField>
+        </Field>
+        <Field Name="InvoiceDiscountAmount">
+          <DataField>InvoiceDiscountAmount</DataField>
+        </Field>
+        <Field Name="InvoiceDiscountAmountFormat">
+          <DataField>InvoiceDiscountAmountFormat</DataField>
+        </Field>
+        <Field Name="AmountIncludingVAT">
+          <DataField>AmountIncludingVAT</DataField>
+        </Field>
+        <Field Name="AmountIncludingVATFormat">
+          <DataField>AmountIncludingVATFormat</DataField>
+        </Field>
+        <Field Name="RemainingAmount">
+          <DataField>RemainingAmount</DataField>
+        </Field>
+        <Field Name="RemainingAmountFormat">
+          <DataField>RemainingAmountFormat</DataField>
+        </Field>
+        <Field Name="Expense_Type">
+          <DataField>Expense_Type</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

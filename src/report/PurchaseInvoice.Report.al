@@ -99,12 +99,10 @@ report 50100 "Purchase Invoice"
                 column(No_; "No.")
                 {
                     IncludeCaption = true;
-
                 }
                 column(Description; Description)
                 {
                     IncludeCaption = true;
-
                 }
                 column(Unit_of_Measure_Code; "Unit of Measure Code")
                 {
@@ -115,10 +113,6 @@ report 50100 "Purchase Invoice"
                 {
                     IncludeCaption = true;
                 }
-                // column(Line_Amount; "Line Amount")
-                // {
-                //     IncludeCaption = true;
-                // }
                 column(Direct_Unit_Cost; "Direct Unit Cost")
                 {
                     IncludeCaption = true;
