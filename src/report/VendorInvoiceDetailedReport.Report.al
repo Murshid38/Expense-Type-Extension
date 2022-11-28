@@ -28,6 +28,7 @@ report 50103 "Vendor Invoice Detailed Report"
 
             dataitem(PurchInvHeader; "Purch. Inv. Header")
             {
+                RequestFilterFields = "Expense Type", "Posting Date";
 
                 column(Vendor_Invoice_No_; "Vendor Invoice No.")
                 {

@@ -11,61 +11,6 @@
       <rd:DataSourceID>d2b86386-8668-4e45-a1a8-70b475e6bcf5</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="ComName">
-          <DataField>ComName</DataField>
-        </Field>
-        <Field Name="ComAddress">
-          <DataField>ComAddress</DataField>
-        </Field>
-        <Field Name="ReportDate">
-          <DataField>ReportDate</DataField>
-        </Field>
-        <Field Name="VendorName">
-          <DataField>VendorName</DataField>
-        </Field>
-        <Field Name="Vendor_Invoice_No_">
-          <DataField>Vendor_Invoice_No_</DataField>
-        </Field>
-        <Field Name="Expense_Type">
-          <DataField>Expense_Type</DataField>
-        </Field>
-        <Field Name="No_">
-          <DataField>No_</DataField>
-        </Field>
-        <Field Name="ItemQuantity">
-          <DataField>ItemQuantity</DataField>
-        </Field>
-        <Field Name="ItemQuantityFormat">
-          <DataField>ItemQuantityFormat</DataField>
-        </Field>
-        <Field Name="Direct_Unit_Cost">
-          <DataField>Direct_Unit_Cost</DataField>
-        </Field>
-        <Field Name="Direct_Unit_CostFormat">
-          <DataField>Direct_Unit_CostFormat</DataField>
-        </Field>
-        <Field Name="Line_Discount_Amount">
-          <DataField>Line_Discount_Amount</DataField>
-        </Field>
-        <Field Name="Line_Discount_AmountFormat">
-          <DataField>Line_Discount_AmountFormat</DataField>
-        </Field>
-        <Field Name="Final_Line_Amount">
-          <DataField>Final_Line_Amount</DataField>
-        </Field>
-        <Field Name="Final_Line_AmountFormat">
-          <DataField>Final_Line_AmountFormat</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1204,4 +1149,59 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ComName">
+          <DataField>ComName</DataField>
+        </Field>
+        <Field Name="ComAddress">
+          <DataField>ComAddress</DataField>
+        </Field>
+        <Field Name="ReportDate">
+          <DataField>ReportDate</DataField>
+        </Field>
+        <Field Name="VendorName">
+          <DataField>VendorName</DataField>
+        </Field>
+        <Field Name="Vendor_Invoice_No_">
+          <DataField>Vendor_Invoice_No_</DataField>
+        </Field>
+        <Field Name="Expense_Type">
+          <DataField>Expense_Type</DataField>
+        </Field>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="ItemQuantity">
+          <DataField>ItemQuantity</DataField>
+        </Field>
+        <Field Name="ItemQuantityFormat">
+          <DataField>ItemQuantityFormat</DataField>
+        </Field>
+        <Field Name="Direct_Unit_Cost">
+          <DataField>Direct_Unit_Cost</DataField>
+        </Field>
+        <Field Name="Direct_Unit_CostFormat">
+          <DataField>Direct_Unit_CostFormat</DataField>
+        </Field>
+        <Field Name="Line_Discount_Amount">
+          <DataField>Line_Discount_Amount</DataField>
+        </Field>
+        <Field Name="Line_Discount_AmountFormat">
+          <DataField>Line_Discount_AmountFormat</DataField>
+        </Field>
+        <Field Name="Final_Line_Amount">
+          <DataField>Final_Line_Amount</DataField>
+        </Field>
+        <Field Name="Final_Line_AmountFormat">
+          <DataField>Final_Line_AmountFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

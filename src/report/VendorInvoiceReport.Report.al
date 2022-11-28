@@ -10,7 +10,7 @@ report 50102 "Vendor Invoice Report"
     {
         dataitem(PurchInvHeader; "Purch. Inv. Header")
         {
-            RequestFilterFields = "Expense Type";
+            RequestFilterFields = "Expense Type", "Posting Date";
             column(ComName; ComInfo.Name)
             {
                 IncludeCaption = true;
@@ -40,6 +40,7 @@ report 50102 "Vendor Invoice Report"
             {
                 IncludeCaption = true;
             }
+
             column(RemainingAmount; "Remaining Amount")
             {
                 IncludeCaption = true;

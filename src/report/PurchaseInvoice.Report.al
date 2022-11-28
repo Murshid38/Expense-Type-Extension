@@ -11,6 +11,7 @@ report 50100 "Purchase Invoice"
         {
             CalcFields = Amount, "Amount Including VAT", "Invoice Discount Amount";
 
+
             column(ComName; ComInfo.Name)
             {
                 IncludeCaption = true;
@@ -95,7 +96,6 @@ report 50100 "Purchase Invoice"
                 DataItemLink = "Document No." = field("no."), "Document Type" = field("Document Type");
                 //"no." is from purchase header table, "Document No." is from purchase line table
                 DataItemLinkReference = PurchaseHeader;
-                RequestFilterFields = "No.";
                 column(No_; "No.")
                 {
                     IncludeCaption = true;

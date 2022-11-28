@@ -510,7 +510,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!AmountIncludingVAT.Value-Fields!InvoiceDiscountAmount.Value</Value>
+                                  <Value>=(Fields!AmountIncludingVAT.Value)-(Fields!InvoiceDiscountAmount.Value)</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -633,7 +633,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Sum(Fields!AmountIncludingVAT.Value-Fields!InvoiceDiscountAmount.Value)</Value>
+                    <Value>=Sum((Fields!AmountIncludingVAT.Value)-(Fields!InvoiceDiscountAmount.Value))</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
