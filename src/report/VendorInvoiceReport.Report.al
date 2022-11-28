@@ -19,6 +19,14 @@ report 50102 "Vendor Invoice Report"
             {
                 IncludeCaption = true;
             }
+            column(ComAddress2; ComInfo."Address 2")
+            {
+                IncludeCaption = true;
+            }
+            column(ComAddress3; ComInfo.City)
+            {
+                IncludeCaption = true;
+            }
 
             column(ReportDate; Today)
             {

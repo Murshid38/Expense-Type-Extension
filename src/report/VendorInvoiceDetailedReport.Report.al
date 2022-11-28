@@ -18,6 +18,15 @@ report 50103 "Vendor Invoice Detailed Report"
                 IncludeCaption = true;
             }
 
+            column(ComAddress2; ComInfo."Address 2")
+            {
+                IncludeCaption = true;
+            }
+            column(ComAddress3; ComInfo.City)
+            {
+                IncludeCaption = true;
+            }
+
             column(ReportDate; Today)
             {
             }

@@ -358,7 +358,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=(Fields!ItemQuantity.Value)*(Fields!Direct_Unit_Cost.Value)</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -388,7 +390,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Line_Discount_Amount.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -418,7 +422,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!Final_Line_Amount.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -517,7 +523,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=SUM((Fields!ItemQuantity.Value)*(Fields!Direct_Unit_Cost.Value))</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -547,7 +555,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Sum(Fields!Line_Discount_Amount.Value)</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -577,7 +587,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Sum(Fields!Final_Line_Amount.Value)</Value>
-                                  <Style />
+                                  <Style>
+                                    <Format>#,0.00</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -654,7 +666,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>0.46333in</Top>
+            <Top>0.21333in</Top>
             <Left>0.26889in</Left>
             <Height>1.36666in</Height>
             <Width>7.91445in</Width>
@@ -671,7 +683,7 @@
       <Width>8.37501in</Width>
       <Page>
         <PageHeader>
-          <Height>1.60833in</Height>
+          <Height>2.24166in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -764,36 +776,6 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="Textbox5">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Fields!ComAddress.Value</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.96527in</Top>
-              <Left>5.51666in</Left>
-              <Height>0.25in</Height>
-              <Width>1in</Width>
-              <ZIndex>3</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Textbox Name="Textbox31">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -813,7 +795,7 @@
               <Left>4.01944in</Left>
               <Height>0.25in</Height>
               <Width>1.29722in</Width>
-              <ZIndex>4</ZIndex>
+              <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -843,7 +825,7 @@
               <Left>4.01944in</Left>
               <Height>0.25in</Height>
               <Width>1.29722in</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -873,7 +855,7 @@
               <Left>0.93055in</Left>
               <Height>0.25in</Height>
               <Width>1.12222in</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -903,7 +885,7 @@
               <Left>0.93055in</Left>
               <Height>0.25in</Height>
               <Width>1.10833in</Width>
-              <ZIndex>7</ZIndex>
+              <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -938,7 +920,97 @@
               <Left>2.10833in</Left>
               <Height>0.45in</Height>
               <Width>4.23333in</Width>
+              <ZIndex>7</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox8">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Fields!ComAddress.Value</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox2</rd:DefaultName>
+              <Top>1.00694in</Top>
+              <Left>5.51666in</Left>
+              <Height>0.25in</Height>
+              <Width>1in</Width>
               <ZIndex>8</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox20">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Fields!ComAddress2.Value</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox2</rd:DefaultName>
+              <Top>1.25694in</Top>
+              <Left>5.51666in</Left>
+              <Height>0.25in</Height>
+              <Width>1in</Width>
+              <ZIndex>9</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox21">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Fields!ComAddress3.Value</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox2</rd:DefaultName>
+              <Top>1.52083in</Top>
+              <Left>5.51666in</Left>
+              <Height>0.25in</Height>
+              <Width>1in</Width>
+              <ZIndex>10</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -978,6 +1050,24 @@
         </Values>
       </DefaultValue>
       <Prompt>ComAddressCaption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ComAddress2Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ComAddress2Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ComAddress2Caption</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ComAddress3Caption">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ComAddress3Caption</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ComAddress3Caption</Prompt>
     </ReportParameter>
     <ReportParameter Name="VendorNameCaption">
       <DataType>String</DataType>
@@ -1055,7 +1145,7 @@
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>1</NumberOfColumns>
-      <NumberOfRows>10</NumberOfRows>
+      <NumberOfRows>12</NumberOfRows>
       <CellDefinitions>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
@@ -1070,41 +1160,51 @@
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>2</RowIndex>
-          <ParameterName>VendorNameCaption</ParameterName>
+          <ParameterName>ComAddress2Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>3</RowIndex>
-          <ParameterName>Vendor_Invoice_No_Caption</ParameterName>
+          <ParameterName>ComAddress3Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>4</RowIndex>
-          <ParameterName>Expense_TypeCaption</ParameterName>
+          <ParameterName>VendorNameCaption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>5</RowIndex>
-          <ParameterName>No_Caption</ParameterName>
+          <ParameterName>Vendor_Invoice_No_Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>6</RowIndex>
-          <ParameterName>ItemQuantityCaption</ParameterName>
+          <ParameterName>Expense_TypeCaption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>7</RowIndex>
-          <ParameterName>Direct_Unit_CostCaption</ParameterName>
+          <ParameterName>No_Caption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>8</RowIndex>
-          <ParameterName>Line_Discount_AmountCaption</ParameterName>
+          <ParameterName>ItemQuantityCaption</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>9</RowIndex>
+          <ParameterName>Direct_Unit_CostCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>10</RowIndex>
+          <ParameterName>Line_Discount_AmountCaption</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>11</RowIndex>
           <ParameterName>Final_Line_AmountCaption</ParameterName>
         </CellDefinition>
       </CellDefinitions>
@@ -1157,6 +1257,12 @@ End Function
         </Field>
         <Field Name="ComAddress">
           <DataField>ComAddress</DataField>
+        </Field>
+        <Field Name="ComAddress2">
+          <DataField>ComAddress2</DataField>
+        </Field>
+        <Field Name="ComAddress3">
+          <DataField>ComAddress3</DataField>
         </Field>
         <Field Name="ReportDate">
           <DataField>ReportDate</DataField>
