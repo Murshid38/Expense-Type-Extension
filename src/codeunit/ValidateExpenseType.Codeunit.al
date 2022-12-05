@@ -6,7 +6,6 @@ codeunit 50100 "Validate Expense Type"
         Rec.TestField("Expense Type");
     end;
 
-
     [EventSubscriber(ObjectType::Page, Page::"Purchase Order", 'OnBeforeActionEvent', 'Post', true, true)]
     local procedure RunOnBeforeActionEvent6(var Rec: Record "Purchase Header")
     begin
