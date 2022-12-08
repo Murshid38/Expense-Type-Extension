@@ -11,6 +11,49 @@
       <rd:DataSourceID>599a36e3-6a7d-4b0b-9d51-5bba952ac6c3</rd:DataSourceID>
     </DataSource>
   </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+      <Fields>
+        <Field Name="Unit_Cost">
+          <DataField>Unit_Cost</DataField>
+        </Field>
+        <Field Name="Unit_CostFormat">
+          <DataField>Unit_CostFormat</DataField>
+        </Field>
+        <Field Name="Inventory_Posting_Group">
+          <DataField>Inventory_Posting_Group</DataField>
+        </Field>
+        <Field Name="PostingDateStart">
+          <DataField>PostingDateStart</DataField>
+        </Field>
+        <Field Name="PostingDateEnd">
+          <DataField>PostingDateEnd</DataField>
+        </Field>
+        <Field Name="ItemNo">
+          <DataField>ItemNo</DataField>
+        </Field>
+        <Field Name="InvoicedQuantity">
+          <DataField>InvoicedQuantity</DataField>
+        </Field>
+        <Field Name="InvoicedQuantityFormat">
+          <DataField>InvoicedQuantityFormat</DataField>
+        </Field>
+        <Field Name="RemainingQuantity">
+          <DataField>RemainingQuantity</DataField>
+        </Field>
+        <Field Name="RemainingQuantityFormat">
+          <DataField>RemainingQuantityFormat</DataField>
+        </Field>
+        <Field Name="PostingDate">
+          <DataField>PostingDate</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -19,19 +62,19 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.53739cm</Width>
+                  <Width>2.42097cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.00306cm</Width>
+                  <Width>2.88664cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.53739cm</Width>
+                  <Width>2.42097cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.53739cm</Width>
+                  <Width>2.42097cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.50589cm</Width>
+                  <Width>5.48912cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -48,7 +91,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Item</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -78,7 +123,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Quantity</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -108,7 +155,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -138,7 +187,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Remaining Qty</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -168,7 +219,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>Value of remaining quantity</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -203,7 +256,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -243,7 +298,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!ItemNo.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -273,7 +330,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!InvoicedQuantity.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -304,6 +363,7 @@
                                 <TextRun>
                                   <Value>=Fields!InvoicedQuantity.Value*Fields!Unit_Cost.Value</Value>
                                   <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
                                     <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
@@ -335,7 +395,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!RemainingQuantity.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -366,6 +428,7 @@
                                 <TextRun>
                                   <Value>=Fields!RemainingQuantity.Value*Fields!Unit_Cost.Value</Value>
                                   <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
                                     <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
@@ -402,7 +465,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -432,7 +497,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -462,7 +529,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=sum(Fields!InvoicedQuantity.Value*Fields!Unit_Cost.Value)</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <Format>#,0.00</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -492,7 +562,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -522,7 +594,10 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=sum(Fields!RemainingQuantity.Value*Fields!Unit_Cost.Value)</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <Format>#,0.00</Format>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -557,7 +632,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -587,7 +664,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -617,7 +696,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -647,7 +728,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -677,7 +760,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value />
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -714,7 +799,7 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>4.34558cm</Size>
+                    <Size>3.36133cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox21">
                         <CanGrow>true</CanGrow>
@@ -724,7 +809,9 @@
                             <TextRuns>
                               <TextRun>
                                 <Value>Inventory Posting Group</Value>
-                                <Style />
+                                <Style>
+                                  <FontFamily>Segoe UI</FontFamily>
+                                </Style>
                               </TextRun>
                             </TextRuns>
                             <Style />
@@ -761,7 +848,7 @@
                     </SortExpression>
                   </SortExpressions>
                   <TablixHeader>
-                    <Size>4.34558cm</Size>
+                    <Size>3.36133cm</Size>
                     <CellContents>
                       <Textbox Name="Inventory_Posting_Group">
                         <CanGrow>true</CanGrow>
@@ -771,7 +858,9 @@
                             <TextRuns>
                               <TextRun>
                                 <Value>=Fields!Inventory_Posting_Group.Value</Value>
-                                <Style />
+                                <Style>
+                                  <FontFamily>Segoe UI</FontFamily>
+                                </Style>
                               </TextRun>
                             </TextRuns>
                             <Style />
@@ -793,6 +882,9 @@
                   </TablixHeader>
                   <TablixMembers>
                     <TablixMember>
+                      <Visibility>
+                        <Hidden>=Fields!Inventory_Posting_Group.Value=""</Hidden>
+                      </Visibility>
                       <KeepWithGroup>After</KeepWithGroup>
                     </TablixMember>
                     <TablixMember>
@@ -800,15 +892,21 @@
                       <TablixMembers>
                         <TablixMember />
                       </TablixMembers>
+                      <Visibility>
+                        <Hidden>=Fields!ItemNo.Value=""</Hidden>
+                      </Visibility>
                     </TablixMember>
                     <TablixMember>
+                      <Visibility>
+                        <Hidden>=sum(Fields!InvoicedQuantity.Value*Fields!Unit_Cost.Value)=0</Hidden>
+                      </Visibility>
                       <KeepWithGroup>Before</KeepWithGroup>
                     </TablixMember>
                   </TablixMembers>
                 </TablixMember>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>4.34558cm</Size>
+                    <Size>3.36133cm</Size>
                     <CellContents>
                       <Textbox Name="Textbox52">
                         <CanGrow>true</CanGrow>
@@ -818,7 +916,9 @@
                             <TextRuns>
                               <TextRun>
                                 <Value />
-                                <Style />
+                                <Style>
+                                  <FontFamily>Segoe UI</FontFamily>
+                                </Style>
                               </TextRun>
                             </TextRuns>
                             <Style />
@@ -843,10 +943,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>0.81761cm</Top>
+            <Top>0.73294cm</Top>
             <Left>0cm</Left>
             <Height>3cm</Height>
-            <Width>19.46672cm</Width>
+            <Width>19cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -854,13 +954,13 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>4.15627cm</Height>
+        <Height>4.17744cm</Height>
         <Style />
       </Body>
-      <Width>19.53022cm</Width>
+      <Width>19cm</Width>
       <Page>
         <PageHeader>
-          <Height>5.52393cm</Height>
+          <Height>5.75676cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -879,14 +979,16 @@
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>0cm</Top>
-              <Left>6.66116cm</Left>
+              <Left>0cm</Left>
               <Height>1.18674cm</Height>
-              <Width>8.29967cm</Width>
+              <Width>19cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -905,7 +1007,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>Date </Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -913,7 +1017,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>1.4097cm</Top>
-              <Left>0.53129cm</Left>
+              <Left>0.42333cm</Left>
               <Height>0.6cm</Height>
               <Width>2.16133cm</Width>
               <ZIndex>1</ZIndex>
@@ -935,7 +1039,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>User </Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -943,7 +1049,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>2.46126cm</Top>
-              <Left>0.53129cm</Left>
+              <Left>0.42333cm</Left>
               <Height>0.6cm</Height>
               <Width>2.16133cm</Width>
               <ZIndex>2</ZIndex>
@@ -965,7 +1071,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>Date Range</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -973,7 +1081,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>3.72448cm</Top>
-              <Left>0.53129cm</Left>
+              <Left>0.42333cm</Left>
               <Height>0.6cm</Height>
               <Width>2.16133cm</Width>
               <ZIndex>3</ZIndex>
@@ -995,7 +1103,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=Today()</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -1003,7 +1113,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>1.4097cm</Top>
-              <Left>2.92779cm</Left>
+              <Left>2.71612cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>4</ZIndex>
@@ -1025,7 +1135,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=User!UserID</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -1033,40 +1145,10 @@
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>2.46126cm</Top>
-              <Left>2.92779cm</Left>
+              <Left>2.71612cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
               <ZIndex>5</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox7">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Fields!PostingDate.Value</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>3.72448cm</Top>
-              <Left>2.92779cm</Left>
-              <Height>0.6cm</Height>
-              <Width>2.5cm</Width>
-              <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1085,7 +1167,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>:</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -1093,10 +1177,10 @@
               </Paragraphs>
               <rd:DefaultName>Textbox9</rd:DefaultName>
               <Top>1.4097cm</Top>
-              <Left>2.69263cm</Left>
+              <Left>2.48096cm</Left>
               <Height>0.6cm</Height>
               <Width>0.23517cm</Width>
-              <ZIndex>7</ZIndex>
+              <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1115,7 +1199,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>:</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -1123,10 +1209,10 @@
               </Paragraphs>
               <rd:DefaultName>Textbox9</rd:DefaultName>
               <Top>3.72448cm</Top>
-              <Left>2.69262cm</Left>
+              <Left>2.48095cm</Left>
               <Height>0.6cm</Height>
               <Width>0.23517cm</Width>
-              <ZIndex>8</ZIndex>
+              <ZIndex>7</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1145,7 +1231,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>:</Value>
-                      <Style />
+                      <Style>
+                        <FontFamily>Segoe UI</FontFamily>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -1153,9 +1241,39 @@
               </Paragraphs>
               <rd:DefaultName>Textbox9</rd:DefaultName>
               <Top>2.46126cm</Top>
-              <Left>2.69262cm</Left>
+              <Left>2.48095cm</Left>
               <Height>0.6cm</Height>
               <Width>0.23517cm</Width>
+              <ZIndex>8</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox14">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Fields!PostingDateStart.Value + " - " + Fields!PostingDateEnd.Value</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox14</rd:DefaultName>
+              <Top>3.72448cm</Top>
+              <Left>2.58466cm</Left>
+              <Height>0.6cm</Height>
+              <Width>2.5cm</Width>
               <ZIndex>9</ZIndex>
               <Style>
                 <Border>
@@ -1177,7 +1295,7 @@
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
         <LeftMargin>1cm</LeftMargin>
-        <RightMargin>0cm</RightMargin>
+        <RightMargin>1cm</RightMargin>
         <TopMargin>1cm</TopMargin>
         <BottomMargin>1cm</BottomMargin>
         <ColumnSpacing>1.27cm</ColumnSpacing>
@@ -1318,41 +1436,4 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Fields>
-        <Field Name="Unit_Cost">
-          <DataField>Unit_Cost</DataField>
-        </Field>
-        <Field Name="Unit_CostFormat">
-          <DataField>Unit_CostFormat</DataField>
-        </Field>
-        <Field Name="Inventory_Posting_Group">
-          <DataField>Inventory_Posting_Group</DataField>
-        </Field>
-        <Field Name="ItemNo">
-          <DataField>ItemNo</DataField>
-        </Field>
-        <Field Name="InvoicedQuantity">
-          <DataField>InvoicedQuantity</DataField>
-        </Field>
-        <Field Name="InvoicedQuantityFormat">
-          <DataField>InvoicedQuantityFormat</DataField>
-        </Field>
-        <Field Name="RemainingQuantity">
-          <DataField>RemainingQuantity</DataField>
-        </Field>
-        <Field Name="RemainingQuantityFormat">
-          <DataField>RemainingQuantityFormat</DataField>
-        </Field>
-        <Field Name="PostingDate">
-          <DataField>PostingDate</DataField>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-    </DataSet>
-  </DataSets>
 </Report>

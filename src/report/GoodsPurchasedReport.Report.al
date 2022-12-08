@@ -19,12 +19,18 @@ report 50104 "Goods Purchased Report"
             {
                 IncludeCaption = true;
             }
+            column(PostingDateStart; PDate1)
+            {
+            }
+            column(PostingDateEnd; PDate2)
+            {
+            }
 
             dataitem(ItemLedgerEntry; "Item Ledger Entry")
             {
                 DataItemLink = "Item No." = field("No.");
                 DataItemLinkReference = Item;
-                RequestFilterFields = "Posting Date";
+                // RequestFilterFields = "Posting Date";
                 column(ItemNo; "Item No.")
                 {
                     IncludeCaption = true;
@@ -41,32 +47,46 @@ report 50104 "Goods Purchased Report"
                 {
                     IncludeCaption = true;
                 }
+
+                trigger OnPreDataItem()//this is a loop
+                begin
+                    if (PDate1 <> 0D) and (PDate2 <> 0D) then
+                        SetRange("Posting Date", PDate1, PDate2);
+                end;
             }
         }
+
     }
+
     requestpage
     {
         layout
         {
-            area(content)
+            area(Content)
             {
-                group(GroupName)
+                group(DateFilter)
                 {
+                    Caption = 'Date Filter';
+
+                    field(PostingDateStart; PDate1)//we are setting the PDate2 variable here using PostingDateEnd field
+                    {
+                        ToolTip = 'Starting Date';
+                        Caption = 'From';
+                        ApplicationArea = all;
+                    }
+                    field(PostingDateEnd; PDate2)//we are setting the PDate2 variable here using PostingDateEnd field
+                    {
+                        ToolTip = 'Ending Date';
+                        Caption = 'To';
+                        ApplicationArea = all;
+                    }
                 }
             }
         }
-        actions
-        {
-            area(processing)
-            {
-            }
-        }
     }
-    var
-        ComInfo: Record "Company Information";
 
-    trigger OnPreReport()
-    begin
-        ComInfo.Get();
-    end;
+
+    var
+        PDate1: Date;
+        PDate2: Date;
 }
