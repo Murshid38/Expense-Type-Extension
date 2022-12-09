@@ -10,6 +10,7 @@ report 50104 "Goods Purchased Report"
         dataitem(Item; Item)
         {
             RequestFilterFields = "Inventory Posting Group";
+            CalcFields = Inventory;
 
             column(Unit_Cost; "Unit Cost")
             {
@@ -30,7 +31,6 @@ report 50104 "Goods Purchased Report"
             {
                 DataItemLink = "Item No." = field("No.");
                 DataItemLinkReference = Item;
-                // RequestFilterFields = "Posting Date";
                 column(ItemNo; "Item No.")
                 {
                     IncludeCaption = true;
@@ -39,23 +39,41 @@ report 50104 "Goods Purchased Report"
                 {
                     IncludeCaption = true;
                 }
-                column(RemainingQuantity; "Remaining Quantity")
-                {
-                    IncludeCaption = true;
-                }
                 column(PostingDate; "Posting Date")
                 {
                     IncludeCaption = true;
                 }
+                column(Entry_Type; "Entry Type")
+                {
+                    IncludeCaption = true;
+                }
+                column(Inventory; InventoryPerItem)
+                {
+                }
 
                 trigger OnPreDataItem()//this is a loop
                 begin
+                    SetRange("Entry Type", "Entry Type"::Purchase);
                     if (PDate1 <> 0D) and (PDate2 <> 0D) then
                         SetRange("Posting Date", PDate1, PDate2);
                 end;
-            }
-        }
 
+                trigger OnAfterGetRecord()
+                begin
+                    Clear(InventoryPerItem);
+                    if LastItem <> "Item No." then
+                        // Item.CalcFields(Inventory);
+                    InventoryPerItem := Item.Inventory;
+
+                    LastItem := Item."No.";
+                end;
+            }
+
+            trigger OnAfterGetRecord()
+            begin
+                Clear(InventoryPerItem);
+            end;
+        }
     }
 
     requestpage
@@ -89,4 +107,6 @@ report 50104 "Goods Purchased Report"
     var
         PDate1: Date;
         PDate2: Date;
+        InventoryPerItem: Decimal;
+        LastItem: Code[20];
 }

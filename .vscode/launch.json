@@ -10,7 +10,7 @@
             "serverInstance": "BC190",
             "authentication": "Windows",
             "startupObjectId": 50104,
-            "startupObjectType": "Page",
+            "startupObjectType": "Report",
             "breakOnError": true,
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
